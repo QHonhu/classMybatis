@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http:// mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="pack.GetUserInfo">
+
+<select id="getUser" parameterType="int" resultType="pack.User">
+	select id,userName,corp from user where id=#{id}
+</select>
+<!-- 
+	<resultMap id="UserMap"			
+		type="com.micro.profession.mybatis.resultMapTest.User">	
+			<constructor>			
+					<idArg column="userId" javaType="int" />				
+					<arg column="userName" javaType="String" />				
+					<arg column="corp" javaType="String" />			
+			</constructor>			
+				<collection property="courses"				
+					ofType="com.micro.profession.mybatis.resultMapTest.Course">
+				<id property="id" column="courseId" />				
+				<result property="courseName" column="courseName" />
+				<association property="teacher" column="teacher_id"	
+				javaType="com.micro.profession.mybatis.resultMapTest.Teacher">
+				<id property="id" column="teacherId" />
+				<result property="teacherName" column="teacherName" />
+			</association>			
+		</collection>	
+	</resultMap>
+	 -->
+</mapper>
